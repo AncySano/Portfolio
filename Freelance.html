@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Freelance</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+   
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <!-- Note: The "styleN" class below should match that of the banner element. -->
+      <header id="header" class="alt style2">
+        <!-- <a href="index.html" class="logo"
+          ><strong>Forty</strong> <span>by HTML5 UP</span></a
+        > -->
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Airtory.html">Airtory</a></li>
+          <li><a href="Freelance.html">Freelance</a></li>
+          <li><a href="Bayasys.html">Bayasys</a></li>
+          <li><a href="Academic.html">Academic</a></li>
+        </ul>
+      </nav>
+
+      <!-- Banner -->
+      <!-- Note: The "styleN" class below should match that of the header element. -->
+      <section id="banner" class="style2">
+        <div class="inner">
+          <span class="image">
+            <img src="images/pic07.jpg" alt="" />
+          </span>
+          <header class="major">
+            <h1>Full stack developer</h1>
+          </header>
+          <div class="content">
+            <p>
+              Freelance work<br />
+              April 2020 - September 2020
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h2>Summary</h2>
+            </header>
+            <p>
+              Sketch app is a vector graphics editor for macOS, used primarily
+              for designing the UI and UX of mobile apps and the web. Compiler
+              is a sketch plugin to extend the exporting capabilities within
+              Sketch.
+            </p>
+          </div>
+        </section>        
+        <!-- Two -->
+        <section id="two" class="spotlights">
+          <section>        
+            <!-- Slideshow container -->
+            <div id="window">
+              <div id="slide-container">
+                <div class="slides">
+                  
+            <!-- First image --> 
+                  <img class="slide" src="images/compilermain.png"> 
+                </div>
+                
+            <!-- Second image --> 
+                <div class="slides">
+                  <img class="slide" src="images/compiler1.png"> 
+                </div>
+                
+             <!-- Third image --> 
+                <div class="slides">
+                  <img class="slide" src="images/compiler2.png"> 
+                </div>
+                <div class="slides">
+                  <img class="slide" src="images/compiler3.png"> 
+                </div>
+                <a id="previous" class="arrow">&#10094</a>
+                  <a id="next" class="arrow">&#10095</a>
+                <div id="text-bar">
+                  <p id="place"></p>
+                </div>
+              </div>
+              <div id="dotsContainer"></div>
+            </div>
+          
+            <br />
+
+          
+            <div class="content">
+              <div class="inner">
+                <header class="major">
+                  <h3>Compiler</h3>
+                </header>
+                <p>
+                 
+My role centers on crafting a compiler plugin to enhance Sketch's exporting capabilities. This encompasses both front-end and back-end development, executed using Vue.js and Node.js. Our goal is to deliver a streamlined exporting experience for Sketch users through meticulous development efforts.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Three -->
+        <section id="three">
+          <div class="inner">
+            <header class="major">
+              <h2>Links</h2>
+            </header>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://compiler-wm.netlify.app/#/"
+                  target="_blank"
+                  class="button"
+                  >Prototype</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.notion.so/Case-Study-COMPILER-PLUGIN-85bb603742964054a37f3ea67a160390"
+                  target="_blank"
+                  class="button"
+                  >Case study</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+  <script>    
+    var index = 0; 
+var locations = ["1/4","2/4","3/4","4/4"]
+
+var slides = document.getElementsByClassName("slides"); 
+var nextArrow = document.getElementById("next");
+
+var previousArrow = document.getElementById("previous");
+
+var place = document.getElementById("place");
+
+
+showSlides(1); 
+
+function showSlides(x) {
+if (x > slides.length-1) {
+  index = 0; 
+}
+if (x < 0) {
+  index = slides.length-1; 
+}
+for (i=0; i < slides.length; i++) {
+  slides[i].style.display = "none";  
+}
+
+slides[index].style.display = "block";
+place.innerHTML = locations[index]; 
+}
+
+nextArrow.onclick = function() {
+index += 1; 
+showSlides(index); 
+} 
+
+previousArrow.onclick = function() {
+index -= 1; 
+showSlides(index); 
+} 
+
+  </script>
+</html>
